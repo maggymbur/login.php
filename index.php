@@ -14,12 +14,13 @@
             <p cass="error"> <?php echo $_GET['error'];?></p>
         <?php } ?>
         <label> User Name </label>
-        <input type="text" name="uname" placeholder="User Nmame"><br>
+        <input type="text" name="uname" placeholder="User Name"><br>
         <label> password </label>
-        <input type="password" name="password" placeholder="password"
-        
-        <button type="submit">login</button>
+        <input type="password" name="password" placeholder="password">
 
+        <button type="submit"> LOGIN</button>
+        
+       
         </form>
     
 </body>

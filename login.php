@@ -3,7 +3,7 @@ session_start();
 include "db_conn.php";
 
 if(isset($_POST['uname']) && isset($_POST['password'])) {
-    function validate(&data){
+    function validate($data){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
@@ -12,7 +12,7 @@ if(isset($_POST['uname']) && isset($_POST['password'])) {
 }
 
 $uname= validate($_POST['uname']);
-$pass = validate($_POST['password'];
+$pass = validate($_POST['password']);
 
 if(empty($uname)) {
     header("location: index.php?error=User Name is required");
@@ -38,7 +38,7 @@ if(mysqli_num_rows($result) === 1) {
         exit();
     }
     else{
-        header("location: index.php?error=Incorrect User Name or password")''
+        header("location: index.php?error=Incorrect User Name or password");
     }
 }
 else{
